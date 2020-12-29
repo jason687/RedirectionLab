@@ -14,7 +14,7 @@ public class PigLatin {
     System.out.println(pigLatinBest ("mock"));
     System.out.println(pigLatinBest ("apple"));
     System.out.println(pigLatinBest ("check"));
-    System.out.println(pigLatinBest ("check."));
+    System.out.println(pigLatinBest ("check!"));
   }
 
   public static String pigLatin (String s) {
@@ -30,7 +30,7 @@ public class PigLatin {
 
   public static String pigLatinBest (String s) {
     String punct = "";
-    if ((s.charAt(0) < 'a') || (s.charAt(0) > 'Z')) {
+    if (!(s.charAt(0) < 'a') && !(s.charAt(0) > 'Z')) {
       return s;
     }
     if (!Character.isLetterOrDigit(s.charAt(s.length() - 1))) {
