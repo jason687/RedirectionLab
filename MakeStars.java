@@ -1,6 +1,16 @@
 import java.util.*;
+import java.io.*;
 
 public class MakeStars {
+  public static String starify (String a) {
+    int len = a.length();
+    String str = "";
+    for (int i = 0; i < len; i++) {
+      str += "*";
+    }
+    return str;
+  }
+
   public static void main (String [] args) {
     Scanner n = new Scanner (System.in);
     String line = "";
@@ -13,17 +23,8 @@ public class MakeStars {
         word = o.next();
         outputStuff += starify(word) + " ";
       }
-      outputStuff += "/n";
-      System.out.println(outputStuff);
+      outputStuff += "\n";
     }
-  }
-
-  public static String starify (String a) {
-    int len = a.length();
-    String str = "";
-    for (int i = 0; i < len; i++) {
-      str += "*";
-    }
-    return str;
+    System.out.println(outputStuff);
   }
 }
