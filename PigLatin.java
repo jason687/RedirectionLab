@@ -41,14 +41,15 @@ public class PigLatin {
     String word = "";
     String outputStuff = "";
     while (n.hasNextLine()) {
+      outputStuff = "";
       line = n.nextLine();
       Scanner o = new Scanner (line);
       while (o.hasNext()) {
         word = o.next();
         outputStuff += pigLatinBest(word) + " ";
       }
-      outputStuff += "\b\n";
+      outputStuff = outputStuff.substring(0, outputStuff.length() - 1);
+      System.out.println(outputStuff);
     }
-    System.out.print(outputStuff);
   }
 }
